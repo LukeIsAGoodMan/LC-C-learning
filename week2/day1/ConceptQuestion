@@ -26,4 +26,10 @@ Answer: the value changes from max to min, or vice versa depend on the way you o
 x=y++, x = y before ++, y=y+1; x=++y means x=y+1 , and y =y+1;
 7. What is the difference between break, continue, and return when used inside a loop
 statement?
+Answer:break will end the loop, continue will skip the current loop and execute the next iteration,
+return will terminate the method, send value to the caller.
 8. What are the three parts of a for statement and which of them are required?
+Answer: 
+ a.initialization: set the initial value where for start
+ b.condition:set the condition to be tested before every iteration, if condition is true, iterate, otherwise end the loop
+ c.update: set the update between each iteration, otherwise this will loop infinitely as every loop is the same.
