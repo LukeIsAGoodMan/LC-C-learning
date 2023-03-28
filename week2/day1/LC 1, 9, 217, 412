@@ -1,0 +1,83 @@
+//1. Two Sum
+
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        int n=nums.Length;
+        int[] res=new int[2];
+        int sum;
+        for(int i=0;i<n-1;i++){
+            for(int j=i+1;j<n;j++){
+                sum=nums[i]+nums[j];
+                if(sum==target){
+                    res[0]=i;
+                    res[1]=j;
+                    return res;
+                }
+            }
+        }
+        return res;
+    }
+}
+
+//9. Palindrome Number
+public class Solution {
+    public bool IsPalindrome(int x) {
+        bool ret=false;
+        if(x<0){
+            return false;
+        }
+        int temp=x;
+        int y=0;
+        while(x!=0){
+            y=y*10+x%10;
+            x=x/10;
+        }
+        if(y==temp){
+            ret= true;
+        }
+        return ret;
+    }
+}
+
+//217. Contains Duplicate
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+        for(int i=0;i<nums.Length-1;i++){
+            for(int j=i+1;j<nums.Length;j++){
+                if(nums[i]==nums[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
+
+//412. Fizz Buzz
+public class Solution {
+    public IList<string> FizzBuzz(int n) {
+        if(n<=0){
+            return null;
+        }
+        String[] ret=new String[n];
+        if(n==1){
+            ret[0]=""+1;
+            return ret;
+        }
+        for(int i=1;i<n+1;i++){
+            if(i%3==0 && i%5==0){
+                ret[i-1]="FizzBuzz";
+            }
+            else if(i%3==0){
+                ret[i-1]="Fizz";
+            }
+            else if(i%5==0){
+                ret[i-1]="Buzz";
+            }
+            else{
+                ret[i-1]=""+i;
+            }
+        }
+        return ret;
+    }
+}
