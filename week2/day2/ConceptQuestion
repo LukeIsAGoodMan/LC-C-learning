@@ -1,0 +1,72 @@
+1.. What are the six combinations of access modifier keywords and what do they do?
+Answer:
+Public: access from any code. Private: only access inside the class. Internal: access within the assembly
+Protected: access within the class and derived class.  Protected internal: access within the class and derived class or nonderived class in the same assembly
+private protected: can be access within the class and derived class from same assembly
+2.What is the difference between the static, const, and readonly keywords when applied to a type member?
+Answer: 
+static: Indicates that a member belongs to the type itself rather than an instance.
+const: Represents a compile-time constant value that cannot be changed after declaration.
+readonly: Represents a runtime constant value that can be assigned only during declaration or within the constructor of the class.
+3. What does a constructor do?
+Answer:
+create the object. initialzes the object property.
+4. Why is the partial keyword useful?
+Answer:
+splitting a class, struct, or interface into multiple files
+5. What is a tuple?
+Answer:
+a lightweight data structure that groups a fixed number of elements with different types, without the need for a custom class or struct.
+6. What does the C# record keyword do?
+Answer:define an immutable reference type with value-based equality semantics, offering a concise syntax for creating such types.
+7. What does overloading and overriding mean?
+overloading: in the same class, define multiple method with same name but different parameters
+overriding: in the derived class, give a new method body for the method within same name as in the parent class.
+8. What is the difference between a field and a property?
+Answer:
+A field is a variable that is a member of a class or struct, 
+whereas a property is a member that provides a flexible mechanism to read, write, or compute the value of a private field.
+9. How do you make a method parameter optional?
+provide default value for the optional parameters.
+10. What is an interface and how is it different from abstract class?
+an interface is an absolutely abstract class only contains abstract methods.  all methods must be override. can be multiple inherit
+abstract class can have both concrete and abstract methods. only inherit once.
+11. What accessibility level are members of an interface?
+public 
+12. True/False. Polymorphism allows derived classes to provide different implementations
+of the same method.
+true
+13. True/False. The override keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method.
+true
+14. True/False. The new keyword is used to indicate that a method in a derived class is
+providing its own implementation of a method.
+true
+15. True/False. Abstract methods can be used in a normal (non-abstract) class. 
+false
+16.True/False. Normal (non-abstract) methods can be used in an abstract class. 
+true
+17. True/False. Derived classes can override methods that were virtual in the base class. 
+true
+18. True/False. Derived classes can override methods that were abstract in the base class. 
+true
+19. True/False.In a derived class, you can override a method that was neither virtual non abstract in the
+base class.
+false
+20. True/False. A class that implements an interface does not have to provide an
+implementation for all of the members of the interface.
+false
+21. True/False. A class that implements an interface is allowed to have other members that
+aren’t defined in the interface.
+true
+22. True/False. A class can have more than one base class.
+false
+23. True/False. A class can implement more than one interface.
+True
+24.What is meant by the terms managed resource and unmanaged resource in .NET
+Managed resources are those managed by the .NET runtime, 
+Unmanaged resources are those not managed by the .NET runtime, such as file handles, network sockets, or database connections.
+25. What's the purpose of Garbage Collector in .NET?
+prevent memory leaks,
+free the object no longer in use;
+reclaim space for new object on the managed heap.
